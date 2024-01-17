@@ -1,0 +1,8 @@
+apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
+kind: VMClass
+metadata:
+  name: x-large
+spec:
+  requests:
+    cpu: "16"
+    memory: "32"
