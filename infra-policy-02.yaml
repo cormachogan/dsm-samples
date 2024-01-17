@@ -1,0 +1,26 @@
+#
+# Manifest for a single vSphere cluster compute resource
+#
+apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
+kind: InfrastructurePolicy
+metadata:
+  name: infra-policy-02
+spec:
+  enabled: false
+  ipRanges:
+  - poolName: ip-pool-1
+    portGroups:
+    - datacenter: /OCTO-Datacenter
+      name: VM-51-DPG-B
+    - datacenter: /OCTO-Datacenter
+      name: VM-51-DPG
+  placements:
+  - cluster: Cluster-A
+    datacenter: /OCTO-Datacenter
+    folder: DB
+    portGroups:
+    - VM-70-DPG
+  storagePolicies:
+  - vSAN Default Storage Policy
+  vmClasses:
+  - name: x-large
