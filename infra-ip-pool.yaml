@@ -1,0 +1,9 @@
+apiVersion: infrastructure.dataservices.vmware.com/v1alpha1 
+kind: IPPool 
+metadata: 
+  name: ip-pool-1 
+spec: 
+  addresses: 
+  - 192.168.0.1-192.168.0.253
+  gateway: 192.168.0.254
+  prefix: 24
