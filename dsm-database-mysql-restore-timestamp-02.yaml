@@ -1,8 +1,21 @@
 #
-# Manifest to create MySQL cluster based on an existing cluster called mysql-01
+# Sample manifest to create MySQL cluster based on an existing cluster called mysql-01
+# using the DSM Gateway API
 #
 # This will use the backup of the source cluster closest to the "timestamp" specificed
 # in the basedOn: section of the manifest
+#
+#
+# You may need to modify the following field:
+# - owner
+# - backupLocation
+# - infrastructurePolocy
+# - storagePolicyName
+# - basedOn.cluster.name
+# - basedOn.cluster.timestamp
+#
+# This can only be run using the kubeconfig from the DSM appliance.
+# It cannot be run using the kubeconfig from the vSphere Client.
 #
 apiVersion: databases.dataservices.vmware.com/v1alpha1
 kind: MySQLCluster
