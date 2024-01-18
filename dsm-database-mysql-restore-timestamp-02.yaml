@@ -5,7 +5,6 @@
 # This will use the backup of the source cluster closest to the "timestamp" specificed
 # in the basedOn: section of the manifest
 #
-#
 # You may need to modify the following field:
 # - owner
 # - backupLocation
