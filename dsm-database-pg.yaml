@@ -8,6 +8,9 @@
 # - infrastructurePolocy
 # - storagePolicyName
 #
+# If you wish to mave HA mode with multiple replicas, simply increase the number of replicas
+# Postgres via DSM supports values of 1 or 3
+#
 # This can only be run using the kubeconfig from the DSM appliance.
 # It cannot be run using the kubeconfig from the vSphere Client.
 #
