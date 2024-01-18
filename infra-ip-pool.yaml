@@ -1,3 +1,9 @@
+#
+# Manifest to create an IP Pool
+# using the DSM Gateway API as Infra Admin
+#
+# You may need to make some changes to the address range to suit your own infrastructure
+#
 apiVersion: infrastructure.dataservices.vmware.com/v1alpha1 
 kind: IPPool 
 metadata: 
