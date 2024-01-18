@@ -1,0 +1,31 @@
+apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
+kind: InfrastructurePolicy
+metadata:
+  name: infra-policy-rp-01
+spec:
+  description: infra policy using resource pools
+  enabled: true
+  ipRanges:
+  - poolName: ip-pool-vlan-62
+    portGroups:
+    - datacenter: /OCTO-Datacenter
+      name: VL-62-DPG-B
+    - datacenter: /OCTO-Datacenter
+      name: VM-62-DPG
+  placements:
+  - cluster: Cluster-B
+    datacenter: /OCTO-Datacenter
+    folder: DB
+    portGroups:
+    - VL-62-DPG-B
+    resourcePool: Gold-B-RP
+  - cluster: Cluster-A
+    datacenter: /OCTO-Datacenter
+    folder: DB
+    portGroups:
+    - VM-62-DPG
+    resourcePool: Gold-A-RP
+  storagePolicies:
+  - vSAN Default Storage Policy
+  vmClasses:
+  - name: medium
