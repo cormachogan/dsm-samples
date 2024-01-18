@@ -1,6 +1,7 @@
 #
 # Sample manifest to create a database options config object using the DSM Gateway API
 #
+# This sets the max_connections option to 200. The default is 100.
 # Once created, a PG database manifest can use this databaseConfig object - see dsm-db-with-options.yaml
 #
 # This can only be run using the kubeconfig from the DSM appliance.
