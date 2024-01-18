@@ -1,3 +1,11 @@
+#
+# Manifest for an infrastructure policy which uses two resource pools from
+# two different vSphere clusters compute resources using the DSM Gateway API as Infra Admin
+#
+# Note: DSM 2.0 does not support using two resource pools from the same vSphere cluster
+#
+# You may need to make some changes for this to work on your own infrastructure
+#
 apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
 kind: InfrastructurePolicy
 metadata:
