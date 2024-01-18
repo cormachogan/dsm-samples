@@ -14,9 +14,7 @@ spec:
   - poolName: ip-pool-1
     portGroups:
     - datacenter: /OCTO-Datacenter
-      name: VM-51-DPG-B
-    - datacenter: /OCTO-Datacenter
-      name: VM-51-DPG
+      name: VM-70-DPG
   placements:
   - cluster: Cluster-A
     datacenter: /OCTO-Datacenter
