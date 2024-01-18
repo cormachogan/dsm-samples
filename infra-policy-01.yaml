@@ -1,5 +1,8 @@
 #
-# Manifest for a two vSphere clusters compute resources
+# Manifest for an infrastructure policy which uses two vSphere clusters compute resources
+# using the DSM Gateway API as Infra Admin
+#
+# You may need to make some changes for this to work on your own infrastructure
 #
 apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
 kind: InfrastructurePolicy
