@@ -1,0 +1,51 @@
+#
+# Sample manifest to create a single node PostgreSQL database
+# with database options using the DSM Gateway API
+#
+# This example uses a databaseConfig to set advanced options on the database
+# This databaseConfig object will also need to be built using the DSM API before you can use this manifest - see dsm-db-options-file.yaml
+#
+# You may need to modify the following fields in the manifest:
+# - owner
+# - backupLocation
+# - infrastructurePolocy
+# - storagePolicyName
+#
+# This can only be run using the kubeconfig from the DSM appliance.
+# It cannot be run using the kubeconfig from the vSphere Client.
+#
+apiVersion: databases.dataservices.vmware.com/v1alpha1
+kind: PostgresCluster
+metadata:
+  annotations:
+    dsm.vmware.com/owner: provider@broadcom.com
+  name: pg-with-db-opts-01
+  namespace: default
+spec:
+  adminUsername: pgadmin
+  backupConfig:
+    backupRetentionDays: 30
+    schedules:
+    - name: default-full-backup
+      schedule: 59 23 * * 6
+      type: full
+    - name: default-incremental-backup
+      schedule: 59 23 1/1 * *
+      type: incremental
+  backupLocation:
+    name: dsm2-db-backup
+  databaseConfig:
+    name: db-config-01
+  databaseName: pg-db-with-options-01
+  infrastructurePolicy:
+    name: infra-policy-01
+  maintenanceWindow:
+    duration: 6h0m0s
+    startDay: SATURDAY
+    startTime: "23:59"
+  replicas: 0
+  storagePolicyName: vSAN Default Storage Policy
+  storageSpace: 60Gi
+  version: 15.5+vmware.v2.0.0-rc.8
+  vmClass:
+    name: medium

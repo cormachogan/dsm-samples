@@ -1,0 +1,18 @@
+#
+# Sample manifest to create a database options config object using the DSM Gateway API
+#
+# Once created, a PG database manifest can use this databaseConfig object - see dsm-db-with-options.yaml
+#
+# This can only be run using the kubeconfig from the DSM appliance.
+# It cannot be run using the kubeconfig from the vSphere Client.
+#
+apiVersion: databases.dataservices.vmware.com/v1alpha1
+kind: DatabaseConfig
+metadata:
+  annotations:
+    dsm.vmware.com/owner: provider@broadcom.com
+  name: db-config-01
+  namespace: default
+spec:
+  params:
+    max_connections: "200"
