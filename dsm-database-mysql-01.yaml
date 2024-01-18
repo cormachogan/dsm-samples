@@ -1,3 +1,16 @@
+#
+# Sample manifest to create a single node MySQL server
+# using the DSM Gateway API
+#
+# You may need to modify the following field:
+# - owner
+# - backupLocation
+# - infrastructurePolocy
+# - storagePolicyName
+#
+# This can only be run using the kubeconfig from the DSM appliance.
+# It cannot be run using the kubeconfig from the vSphere Client.
+#
 apiVersion: databases.dataservices.vmware.com/v1alpha1
 kind: MySQLCluster
 metadata:
