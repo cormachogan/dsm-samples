@@ -5,6 +5,9 @@
 # This example uses a databaseConfig to set advanced options on the database
 # This databaseConfig object will also need to be built using the DSM API before you can use this manifest - see dsm-db-options-file.yaml
 #
+# If you wish to mave HA mode with multiple replicas, simply increase the number of replicas
+# Postgres via DSM supports values of 1 or 3
+#
 # You may need to modify the following fields in the manifest:
 # - owner
 # - backupLocation
