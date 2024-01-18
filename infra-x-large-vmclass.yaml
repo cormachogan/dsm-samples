@@ -1,3 +1,6 @@
+#
+# Manifest for a VM Class using the DSM Gateway API as Infra Admin
+#
 apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
 kind: VMClass
 metadata:
