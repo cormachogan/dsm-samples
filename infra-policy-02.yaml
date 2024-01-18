@@ -1,5 +1,8 @@
 #
-# Manifest for a single vSphere cluster compute resource
+# Manifest for an infrastructure policy which uses a single vSphere cluster compute resources
+# using the DSM Gateway API as Infra Admin
+#
+# You may need to make some changes for this to work on your own infrastructure
 #
 apiVersion: infrastructure.dataservices.vmware.com/v1alpha1
 kind: InfrastructurePolicy
