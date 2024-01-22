@@ -2,7 +2,7 @@
 Sample YAML manifests for the API gateway on Data Services Manager 2.0 (VMware)
 
 Two sets of examples are included, one infrastructure focused and the other data service focused.
-Different personas (infra admin & dsm admin) determine which operations can be applied by the different persona.
+Different personas (infra admin & dsm admin/user) determine which operations can be applied by the different persona.
 
 Thus different kubeconfigs are required depending on whether an infrastructure operation or a DSM data service operation is being carried out.
 
