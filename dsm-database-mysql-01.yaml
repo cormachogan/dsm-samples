@@ -2,7 +2,7 @@
 # Sample manifest to create a single node MySQL server
 # using the DSM Gateway API
 #
-# You may need to modify the following field:
+# You may need to modify the following fields:
 # - owner
 # - backupLocation
 # - infrastructurePolocy
