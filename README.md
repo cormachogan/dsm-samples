@@ -1,4 +1,4 @@
-# dsm-samples
+# Data Services Manager 2.0 - Gateway API Examples
 Sample YAML manifests for the API gateway on Data Services Manager 2.0 (VMware)
 
 Two sets of examples are included, one infrastructure focused and the other data service focused.
