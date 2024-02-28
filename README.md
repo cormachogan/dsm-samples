@@ -1,6 +1,9 @@
 # Data Services Manager 2.0 - Gateway API Examples
 Sample YAML manifests for the API gateway on Data Services Manager 2.0 (VMware)
 
+See the following blog post for details on how to use the Gateway API:
+- https://cormachogan.com/2024/01/23/getting-started-with-data-services-manager-2-0-part-7-dsm-api/
+  
 Two sets of examples are included, one infrastructure focused and the other data service focused.
 Different personas (infra admin & dsm admin/user) determine which operations can be applied by the different persona.
 
